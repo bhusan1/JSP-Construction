@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ssp-engineering": {
+    "jsp-construction": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ssp-engineering",
+            "outputPath": "dist/jsp-construction",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ssp-engineering:build"
+            "browserTarget": "jsp-construction:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ssp-engineering:build:production"
+              "browserTarget": "jsp-construction:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ssp-engineering:build"
+            "browserTarget": "jsp-construction:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "ssp-engineering-e2e": {
+    "jsp-construction-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,7 +107,7 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ssp-engineering:serve:production"
+              "devServerTarget": "jsp-construction:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "ssp-engineering"
+  "defaultProject": "jsp-construction"
 }

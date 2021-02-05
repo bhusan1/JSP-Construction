@@ -1,9 +1,9 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyCr_PCBmjzl1ZGAli6kAp7ZkZ4JoPvcp3Q",
-  authDomain: "ssp-engineering-cadfe.firebaseapp.com",
-  projectId: "ssp-engineering-cadfe",
-  storageBucket: "ssp-engineering-cadfe.appspot.com",
-  messagingSenderId: "413489822356",
-  appId: "1:413489822356:web:26fa0647a4d14e86775281",
-  measurementId: "G-4N0C2TY40Z"
+  apiKey: "AIzaSyDGqj1-Hn3MjAeIaA9Xwpy5ohS2wa46y4E",
+  authDomain: "jsp-construction.firebaseapp.com",
+  projectId: "jsp-construction",
+  storageBucket: "jsp-construction.appspot.com",
+  messagingSenderId: "532541070125",
+  appId: "1:532541070125:web:9cb94f6d388bf12629d1a4",
+  measurementId: "G-ZHCZ91PDYY"
 };

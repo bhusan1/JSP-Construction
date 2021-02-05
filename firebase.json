@@ -7,7 +7,7 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "dist/ssp-engineering",
+    "public": "dist/jsp-construction",
     "ignore": [
       "firebase.json",
       "**/.*",
