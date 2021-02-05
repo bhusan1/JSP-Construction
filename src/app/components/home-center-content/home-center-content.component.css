@@ -89,7 +89,7 @@
 }
 
 .team_slider .team_item .member_name {
-  background: #cb3d39;
+  background: #2bb102;
   text-align: center;
   padding: 15px 0px;
 }
@@ -142,8 +142,8 @@
 }
 
 .team_slider .owl-nav .owl-prev:hover, .team_slider .owl-nav .owl-next:hover {
-  background: #cb3d39;
-  border-color: #cb3d39;
+  background: #2bb102;
+  border-color: #2bb102;
   color: #fff;
 }
 
