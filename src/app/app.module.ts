@@ -39,8 +39,6 @@ import { SubNavigationsComponent } from './components/navigation/sub-navigations
 import { IndustrialComponent } from './components/industrial/industrial.component';
 import { MunicipalComponent } from './components/municipal/municipal.component';
 import { CommercialComponent } from './components/commercial/commercial.component';
-import { TimesheetComponent } from './components/admin/timesheet/timesheet.component';
-import { ViewTimesheetComponent } from './components/admin/view-timesheet/viewtimesheet.component';
 
 
 @NgModule({
@@ -74,8 +72,6 @@ import { ViewTimesheetComponent } from './components/admin/view-timesheet/viewti
     IndustrialComponent,
     MunicipalComponent,
     CommercialComponent,
-    TimesheetComponent,
-    ViewTimesheetComponent
   ],
   imports: [
     BrowserModule,
@@ -156,16 +152,6 @@ import { ViewTimesheetComponent } from './components/admin/view-timesheet/viewti
             path: 'addServices',
             component: AddServicesComponent,
             outlet: 'sidebar'
-          },
-          {
-            path: 'viewtimesheet',
-            component: ViewTimesheetComponent,
-            outlet: 'sidebar'
-          },
-          {
-            path: 'timesheet',
-            component: TimesheetComponent,
-            outlet: 'sidebar'
           },         
           {
             path: 'logout',
@@ -184,11 +170,6 @@ import { ViewTimesheetComponent } from './components/admin/view-timesheet/viewti
             path: '**',
             redirectTo: '/userdashboard/(sidebar:timesheet)',
             pathMatch: 'full'
-          },
-          {
-            path: 'timesheet',
-            component: TimesheetComponent,
-            outlet: 'sidebar'
           },
           {
             path: 'logout',

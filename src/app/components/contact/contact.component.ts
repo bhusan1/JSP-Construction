@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
         return doc.data();
       }
       else {
-        console.log('No settings availabel!');
+        console.log('No settings available!');
         return null;
       }
     }).catch(function (error) {
