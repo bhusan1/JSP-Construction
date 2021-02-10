@@ -8,8 +8,13 @@
 
 }
 .bgimg-1 {
-  background-image: url("../../../assets/images/transparent-bg.png");
-  min-height: 100%;
+  background-image: url("../../../assets/images/construction/cieling-roof.jpg");
+  min-height: 50%;
+}
+
+.divider{
+  padding-top: 20;
+  min-height: 10%;
 }
 
 .caption {

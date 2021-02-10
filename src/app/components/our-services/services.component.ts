@@ -26,7 +26,7 @@ export class ServicesComponent implements OnInit {
     const queryFunction: QueryFn = this.getQueryFunction();
     if (!this.serviceListings) {
       this.fbService
-        .getFirestoreCollection('services-test', queryFunction)
+        .getFirestoreCollection('services', queryFunction)
         .valueChanges()
         .subscribe((data) => {
           this.serviceListings = data;

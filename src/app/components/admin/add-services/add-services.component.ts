@@ -75,7 +75,7 @@ export class AddServicesComponent implements OnInit, OnChanges {
     const updatedAt = this.firebaseService.getFirestoreTimestamp();
     this.addServicesForm.value.description = this.serviceId ? this.addServicesForm.value.description : this.addServicesForm.value.description.split(',');
     const data = serviceId ? { serviceId, updatedAt, ...this.addServicesForm.value } : { serviceId, createdAt, updatedAt, ...this.addServicesForm.value };
-    const fbRef = '/services-test/' + serviceId.replace(/\s/g, '');
+    const fbRef = '/services/' + serviceId.replace(/\s/g, '');
     const msg = this.serviceId ? 'Service Updated' : 'Service Added';
     if (this.serviceId) {
       this.firebaseService.updateFirestoreDocument(fbRef, data).then(() => {

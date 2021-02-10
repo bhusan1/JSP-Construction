@@ -39,7 +39,7 @@
 }
 
 .main_header_area.navbar_fixed .main_menu_area .navbar.navbar-default .nav.navbar-nav.navbar-right li.active a {
-  color: #2bb102;
+  color: #fff; /*pressed tab*/
 }
 
 .main_menu_area {
