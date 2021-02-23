@@ -1,7 +1,12 @@
 .our_team_area {
   padding: 0px 0px 0px 0px;
   opacity: 100;
+  background-color: #c4c6ca;  
 }
+
+/* .container{
+  width:80%;
+} */
 
 .our_team_area .main_b_r_title {
   margin-bottom: 35px;
@@ -19,6 +24,7 @@
 
 .team_slider .team_item .team_image img{
   max-height: 240px;
+  
 }
 
 .team_slider .team_item .team_image:before {
