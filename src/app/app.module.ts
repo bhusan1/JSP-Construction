@@ -15,6 +15,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { HighlightsComponent } from './components/highlights/highlights.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FocusComponent } from './components/focus/focus.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { LoginComponent } from './components/admin/login/login.component';
 import { FormValidatorComponent } from './components/admin/form-validator/form-validator.component';
@@ -36,7 +38,7 @@ import { ViewServicesComponent } from './components/admin/view-services/view-ser
 import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
 import { HomeCenterContentComponent } from './components/home-center-content/home-center-content.component';
 import { SubNavigationsComponent } from './components/navigation/sub-navigations/sub-navigations.component';
-import { IndustrialComponent } from './components/industrial/industrial.component';
+import { ResidentialComponent } from './components/residential/residential.component';
 import { MunicipalComponent } from './components/municipal/municipal.component';
 import { CommercialComponent } from './components/commercial/commercial.component';
 
@@ -53,6 +55,8 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     HighlightsComponent,
     ClientsComponent,
     ContactComponent,
+    FocusComponent,
+    FeedbackComponent,
     CopyrightComponent,
     LoginComponent,
     FormValidatorComponent,
@@ -69,7 +73,7 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     DialogContentComponent,
     HomeCenterContentComponent,
     SubNavigationsComponent,
-    IndustrialComponent,
+    ResidentialComponent,
     MunicipalComponent,
     CommercialComponent,
   ],
@@ -89,8 +93,8 @@ import { CommercialComponent } from './components/commercial/commercial.componen
         component: IndexComponent
       },
       {
-        path: 'industrial',
-        component: IndustrialComponent
+        path: 'residential',
+        component: ResidentialComponent
       },
       {
         path: 'commercial',

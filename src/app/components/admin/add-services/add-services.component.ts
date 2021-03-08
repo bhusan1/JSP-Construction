@@ -14,8 +14,7 @@ export class AddServicesComponent implements OnInit, OnChanges {
   imageUrl?: null;
   hideResetButton = true;
   serviceCategoryOptions = [
-    { value: 'industrial', viewValue: 'Industrial' },
-    { value: 'municipal', viewValue: 'Municipal' },
+    { value: 'residential', viewValue: 'Residential' },
     { value: 'commercial', viewValue: 'Commercial' }
   ];
   @Input() serviceId: string;

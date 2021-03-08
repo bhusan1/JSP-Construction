@@ -30,8 +30,11 @@
     "file-saver": "^2.0.5",
     "firebase": "^6.6.2",
     "firebase-tools": "^9.1.0",
+    "icons": "^1.0.0",
     "moment": "^2.29.1",
+    "react-native-vector-icons": "^8.1.0",
     "rxjs": "~6.2.0",
+    "vector": "^0.0.4",
     "xlsx": "^0.16.9",
     "zone.js": "~0.8.26"
   },
