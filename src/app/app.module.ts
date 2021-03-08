@@ -17,6 +17,8 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FocusComponent } from './components/focus/focus.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { AbResComponent } from './components/ab-residential/ab-residential.component';
+import { AbComComponent } from './components/ab-commercial/ab-commercial.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { LoginComponent } from './components/admin/login/login.component';
 import { FormValidatorComponent } from './components/admin/form-validator/form-validator.component';
@@ -57,6 +59,8 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     ContactComponent,
     FocusComponent,
     FeedbackComponent,
+    AbResComponent,
+    AbComComponent,
     CopyrightComponent,
     LoginComponent,
     FormValidatorComponent,
