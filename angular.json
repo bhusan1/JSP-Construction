@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jsp-construction",
+            "outputPath": "dist/innovative-construction",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jsp-construction:build"
+            "browserTarget": "innovative-construction:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "jsp-construction:build:production"
+              "browserTarget": "innovative-construction:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jsp-construction:build"
+            "browserTarget": "innovative-construction:build"
           }
         },
         "test": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ssp-engineering:serve"
+            "devServerTarget": "innovative-construction:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "jsp-construction:serve:production"
+              "devServerTarget": "innovative-construction:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "jsp-construction"
+  "defaultProject": "innovative-construction"
 }
