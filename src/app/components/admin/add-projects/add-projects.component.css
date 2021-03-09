@@ -1,4 +1,5 @@
 .add-project-form {
+  min-height: 600px;
 }
 
 .full-width {
@@ -22,10 +23,10 @@
 }
 
 .mat-grid-tile {
-  padding-top: calc(((20% - 0.5px) * 1) + 20px) !important;
+  padding-top: 20px;
   padding-bottom: 20px !important;
 }
-.mat-grid-list {
+/* .mat-grid-list {
   padding-bottom: calc(((1 * ((25% - 0.5px) * 1)) + 0px) + 0px) !important;
-}
+} */
 

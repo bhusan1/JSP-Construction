@@ -28,6 +28,7 @@ import {
 export class ViewProjectsComponent implements OnInit {
   displayedColumns = [
     'title',
+    'projectCategory',
     'imageSrc',
     'description',
     'updatedAt',
@@ -48,6 +49,7 @@ export class ViewProjectsComponent implements OnInit {
       .valueChanges()
       .subscribe(projectData => {
         if (projectData) {
+          console.log(projectData);
           this.noProjectData = false;
           this.dataSource = new MatTableDataSource(projectData);
         }

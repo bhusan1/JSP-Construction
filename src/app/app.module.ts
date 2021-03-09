@@ -28,7 +28,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AuthGuard } from './guard/auth.guard';
-import { AllProjectsComponent } from './components/all-projects/all-projects.component';
 import { AddProjectsComponent } from './components/admin/add-projects/add-projects.component';
 import { LogoutComponent } from './components/admin/logout/logout.component';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
@@ -65,7 +64,6 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     LoginComponent,
     FormValidatorComponent,
     DashboardComponent,
-    AllProjectsComponent,
     AddProjectsComponent,
     LogoutComponent,
     UploadFileComponent,
@@ -108,10 +106,10 @@ import { CommercialComponent } from './components/commercial/commercial.componen
         path: 'municipal',
         component: MunicipalComponent
       },
-      {
+     /*  {
         path: 'projects',
         component: AllProjectsComponent
-      },
+      }, */
       {
         path: 'careers',
         component: CarrersComponent

@@ -19,6 +19,7 @@
             {{element[column].seconds * 1000 | date}}
           </span>
         </span>
+
         <span *ngSwitchCase="'actions'">
           <div class="example-button-row">
             <button mat-icon-button color="primary" matTooltip="Edit">
@@ -33,6 +34,7 @@
       </div>
     </td>
   </ng-container>
+  
   <ng-container matColumnDef="expandedDetail">
     <td mat-cell *matCellDef="let ele" [attr.colspan]="displayedColumns.length">
       <div class="example-element-detail" [@detailExpand]="ele == expandedElement ? 'expanded' : 'collapsed'">

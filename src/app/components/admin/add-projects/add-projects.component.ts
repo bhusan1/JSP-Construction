@@ -13,10 +13,15 @@ export class AddProjectsComponent implements OnInit, OnChanges {
   addProjectForm: FormGroup;
   imageUrl?: null;
   hideResetButton = true;
+  projectCategoryOptions = [
+    { value: 'residential', viewValue: 'Residential' },
+    { value: 'commercial', viewValue: 'Commercial' }
+  ];
   @Input() projectId: string;
   @Input() title: string;
   @Input() description: string;
   @Input() imageSrc: string;
+  @Input() category: string;
 
   constructor(private fb: FormBuilder, private firebaseService: FirebaseService, private snackBar: MatSnackBar) {}
 
@@ -49,6 +54,9 @@ export class AddProjectsComponent implements OnInit, OnChanges {
   buildForm(): void {
     this.addProjectForm = this.fb.group({
       title: [this.title, [Validators.required]],
+      projectCategory: [this.projectCategoryOptions[0].value, [
+        Validators.required]
+      ],
       description: [this.description, [Validators.required]],
       imageSrc: [this.imageSrc || this.imageUrl, [Validators.required, Validators.pattern(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/)]]
     });
@@ -64,6 +72,7 @@ export class AddProjectsComponent implements OnInit, OnChanges {
     const projectId = this.projectId ? this.projectId : this.firebaseService.createDocumentId();
     const createdAt = this.firebaseService.getFirestoreTimestamp();
     const updatedAt = this.firebaseService.getFirestoreTimestamp();
+    this.addProjectForm.value.description = this.projectId ? this.addProjectForm.value.description : this.addProjectForm.value.description.split(',');
     const data = projectId ? {projectId, updatedAt, ...this.addProjectForm.value} : {projectId, createdAt, updatedAt, ...this.addProjectForm.value};
     const fbRef = '/projects/' + projectId.replace(/\s/g, '');
     const msg = this.projectId ? 'Project Updated' : 'Project Added';

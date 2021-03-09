@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 .our-services {
   text-align: center;
-  padding: 100px 0 70px 0;
+  padding: 100px 0 20px 0;
   background: #f5f5f5;
+}
+
+.container{
+  width: 80%;
 }
 
 .our-services .main_c_b_title {

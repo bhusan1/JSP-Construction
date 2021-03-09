@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ViewEncapsulation } from '@angular/core';
 import { FirebaseService } from 'app/services/firebase.service';
 import { defaultNoOfItems } from '../../config';
 import { QueryFn } from '@angular/fire/firestore';
@@ -6,13 +7,13 @@ import { QueryFn } from '@angular/fire/firestore';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ProjectsComponent implements OnInit {
-  @Input() title: string;
-  @Input() projectListings: any;
   @Input() noOfItems: number | string;
-
+  @Input() projectListings: any;
+  @Input() projectType: string;
   noOfItemsFromConfig = defaultNoOfItems;
 
   constructor(private fbService: FirebaseService) {}
@@ -22,8 +23,8 @@ export class ProjectsComponent implements OnInit {
   }
 
   showProjectListingsDefault() {
+    const queryFunction: QueryFn = this.getQueryFunction();
     if (!this.projectListings) {
-      const queryFunction: QueryFn = this.getQueryFunction();
       this.fbService
         .getFirestoreCollection('projects', queryFunction)
         .valueChanges()
@@ -36,12 +37,12 @@ export class ProjectsComponent implements OnInit {
   getQueryFunction() {
     if (this.noOfItems) {
       if (typeof this.noOfItems === 'number') {
-        return (ref: any) => ref.orderBy('createdAt').limit(this.noOfItems);
+        return (ref: any) =>  ref.where('projectCategory', '==', this.projectType).limit(this.noOfItems);
       }
       else if (typeof this.noOfItems === 'string' && this.noOfItems === 'all') {
-        return (ref: any) => ref.orderBy('createdAt');
+        return (ref: any) => ref.where('projectCategory', '==', this.projectType);
       }
     }
-    return (ref: any) => ref.orderBy('createdAt').limit(this.noOfItemsFromConfig);
+    return (ref: any) => ref.where('projectCategory', '==', this.projectType).limit(this.noOfItemsFromConfig);
   }
 }
