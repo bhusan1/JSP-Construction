@@ -5,6 +5,9 @@
   
   .who_we_are_area .main_w_title {
     padding-bottom: 30px;
+  }
+
+  .who_we_inner .who_we_right_content h2 {
     text-transform: capitalize;
   }
   

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -17,6 +18,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FocusComponent } from './components/focus/focus.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { FeedService } from './components/feedbackService/feed-ser.service'
 import { AbResComponent } from './components/ab-residential/ab-residential.component';
 import { AbComComponent } from './components/ab-commercial/ab-commercial.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
@@ -85,6 +87,7 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     ReactiveFormsModule,
     MaterialModule,
     HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
@@ -187,7 +190,9 @@ import { CommercialComponent } from './components/commercial/commercial.componen
       { path: '**', redirectTo: '' }
     ])
   ],
-  providers: [],
+  providers: [
+    FeedService
+  ],
   entryComponents: [DialogContentComponent],
   bootstrap: [AppComponent]
 })
