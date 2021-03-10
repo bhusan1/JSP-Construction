@@ -11,17 +11,17 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { IndexComponent } from './components/index/index.component';
 import { ParallexComponent } from './components/parallex/parallex.component';
 import { ServicesComponent } from './components/our-services/services.component';
-import { AboutComponent } from './components/about/about.component';
+import { AboutComponent } from './components/Home/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { HighlightsComponent } from './components/highlights/highlights.component';
+import { HighlightsComponent } from './components/Common/highlights/highlights.component';
 import { ClientsComponent } from './components/clients/clients.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { FocusComponent } from './components/focus/focus.component';
-import { FeedbackComponent } from './components/feedback/feedback.component';
-import { FeedService } from './components/feedbackService/feed-ser.service'
-import { AbResComponent } from './components/ab-residential/ab-residential.component';
-import { AbComComponent } from './components/ab-commercial/ab-commercial.component';
-import { CopyrightComponent } from './components/copyright/copyright.component';
+import { ContactComponent } from './components/Common/contact/contact.component';
+import { FocusComponent } from './components/Home/focus/focus.component';
+import { FeedbackComponent } from './components/Home/feedback/feedback.component';
+import { FeedService } from './components/Home/feedbackService/feed-ser.service'
+import { AbResComponent } from './components/Home/ab-residential/ab-residential.component';
+import { AbComComponent } from './components/Home/ab-commercial/ab-commercial.component';
+import { CopyrightComponent } from './components/Common/copyright/copyright.component';
 import { LoginComponent } from './components/admin/login/login.component';
 import { FormValidatorComponent } from './components/admin/form-validator/form-validator.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -35,14 +35,12 @@ import { LogoutComponent } from './components/admin/logout/logout.component';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { ViewProjectsComponent } from './components/admin/view-projects/view-projects.component';
 import { CarrersComponent } from './components/carrers/carrers.component';
-import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { AddServicesComponent } from './components/admin/add-services/add-services.component';
 import { ViewServicesComponent } from './components/admin/view-services/view-services.component';
-import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
-import { HomeCenterContentComponent } from './components/home-center-content/home-center-content.component';
+import { DialogContentComponent } from './components/Common/dialog-content/dialog-content.component';
+import { HomeCenterContentComponent } from './components/Home/home-center-content/home-center-content.component';
 import { SubNavigationsComponent } from './components/navigation/sub-navigations/sub-navigations.component';
 import { ResidentialComponent } from './components/residential/residential.component';
-import { MunicipalComponent } from './components/municipal/municipal.component';
 import { CommercialComponent } from './components/commercial/commercial.component';
 
 
@@ -71,14 +69,12 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     UploadFileComponent,
     ViewProjectsComponent,
     CarrersComponent,
-    NewsletterComponent,
     AddServicesComponent,
     ViewServicesComponent,
     DialogContentComponent,
     HomeCenterContentComponent,
     SubNavigationsComponent,
     ResidentialComponent,
-    MunicipalComponent,
     CommercialComponent,
   ],
   imports: [
@@ -104,10 +100,6 @@ import { CommercialComponent } from './components/commercial/commercial.componen
       {
         path: 'commercial',
         component: CommercialComponent
-      },
-      {
-        path: 'municipal',
-        component: MunicipalComponent
       },
      /*  {
         path: 'projects',
