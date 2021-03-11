@@ -42,6 +42,7 @@ import { HomeCenterContentComponent } from './components/Home/home-center-conten
 import { SubNavigationsComponent } from './components/navigation/sub-navigations/sub-navigations.component';
 import { ResidentialComponent } from './components/residential/residential.component';
 import { CommercialComponent } from './components/commercial/commercial.component';
+import { AllProjectsComponent } from './components/Common/all-projects/all-projects.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { CommercialComponent } from './components/commercial/commercial.componen
     FormValidatorComponent,
     DashboardComponent,
     AddProjectsComponent,
+    AllProjectsComponent,
     LogoutComponent,
     UploadFileComponent,
     ViewProjectsComponent,
@@ -101,10 +103,10 @@ import { CommercialComponent } from './components/commercial/commercial.componen
         path: 'commercial',
         component: CommercialComponent
       },
-     /*  {
+      {
         path: 'projects',
         component: AllProjectsComponent
-      }, */
+      },
       {
         path: 'careers',
         component: CarrersComponent

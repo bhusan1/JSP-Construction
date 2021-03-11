@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class FeedService {
-  private mailApi = 'https://mailthis.to/FeedBhusan'
+  private mailApi = 'https://mailthis.to/InfoInno'
 
   constructor(private http: HttpClient) { }
 
