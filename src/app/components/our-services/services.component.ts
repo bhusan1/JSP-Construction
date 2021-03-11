@@ -14,6 +14,7 @@ export class ServicesComponent implements OnInit {
   @Input() noOfItems: number | string;
   @Input() serviceListings: any;
   @Input() serviceType: string;
+  @Input() num: number;
   noOfItemsFromConfig = defaultNoOfServices;
 
   constructor(private fbService: FirebaseService) { }
@@ -24,6 +25,7 @@ export class ServicesComponent implements OnInit {
 
   showServiceListingsDefault() {
     const queryFunction: QueryFn = this.getQueryFunction();
+
     if (!this.serviceListings) {
       this.fbService
         .getFirestoreCollection('services', queryFunction)
@@ -37,12 +39,12 @@ export class ServicesComponent implements OnInit {
   getQueryFunction() {
     if (this.noOfItems) {
       if (typeof this.noOfItems === 'number') {
-        return (ref: any) => ref.where('serviceCategory', '==', this.serviceType).limit(this.noOfItems);
+        return (ref: any) => ref.where('serviceCategory', '==', this.serviceType).orderBy('number','asc');
       }
       else if (typeof this.noOfItems === 'string' && this.noOfItems === 'all') {
-        return (ref: any) => ref.where('serviceCategory', '==', this.serviceType);
+        return (ref: any) => ref.where('serviceCategory', '==', this.serviceType).orderBy('number','asc');
       }
     }
-    return (ref: any) => ref.where('serviceCategory', '==', this.serviceType).limit(this.noOfItemsFromConfig);
+    return (ref: any) => ref.where('serviceCategory', '==', this.serviceType).orderBy('number','asc').limit(this.noOfItemsFromConfig);
   }
 }

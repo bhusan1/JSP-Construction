@@ -22,6 +22,7 @@ export class AddServicesComponent implements OnInit, OnChanges {
   @Input() description: string;
   @Input() imageSrc: string;
   @Input() category: string;
+  @Input() num: number;
 
   constructor(private fb: FormBuilder, private firebaseService: FirebaseService, private snackBar: MatSnackBar) { }
 
@@ -34,7 +35,7 @@ export class AddServicesComponent implements OnInit, OnChanges {
   }
 
   checkIfUpdateIsNeeded(): Boolean {
-    if (this.serviceId && this.title && this.description && this.imageSrc) {
+    if (this.serviceId && this.title && this.description && this.imageSrc && this.num) {
       return true;
     }
     return false;
@@ -53,6 +54,7 @@ export class AddServicesComponent implements OnInit, OnChanges {
 
   buildForm(): void {
     this.addServicesForm = this.fb.group({
+      number: [this.num, [Validators.required]],
       title: [this.title, [Validators.required]],
       serviceCategory: [this.serviceCategoryOptions[0].value, [
         Validators.required]

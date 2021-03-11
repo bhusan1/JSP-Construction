@@ -38,11 +38,11 @@
 }
 
 .main_header_area.navbar_fixed .main_menu_area .navbar.navbar-default .nav.navbar-nav.navbar-right li.active a {
-  color: rgb(15, 15, 15); /*color for hovering on the tab*/
+  color: rgb(252, 6, 6); /*color for hovering on the tab*/
 }
 
 .active { /* color for tab pressed*/
-  color: rgb(8, 8, 8) !important;
+  color: rgb(243, 9, 9) !important;
 }
 
 .main_menu_area {

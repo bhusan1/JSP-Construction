@@ -3,4 +3,5 @@ export interface FeedbackModel {
     category:string;
     name: string;
     email: string;
+    phone: string;
 }

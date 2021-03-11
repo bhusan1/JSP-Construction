@@ -34,6 +34,7 @@ export class FeedbackComponent implements OnInit {
       msg: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(100)]],
       category: ['', Validators.required],
       name: ['', Validators.required],
+      phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]]
     });
 

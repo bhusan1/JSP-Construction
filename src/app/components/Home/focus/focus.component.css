@@ -1,7 +1,12 @@
 .container {
     background: #fff;
-    padding: 32px;
-    width: 80%;
+    padding: 32px 0px 12px 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.focus_area  {
+    padding: 25px;
 }
 
 .focus_area .media .media-bottom {
@@ -14,8 +19,6 @@
     margin: auto;
 }
 
-
-
 .focus_area .media .media-body {
     vertical-align: middle;
 }
@@ -24,14 +27,14 @@
     font-size: 22px;
     font-family: "Lato", sans-serif;
     font-weight: bold;
-    color: #074d0a;
+    color: #0d0e0d;
     text-align: center;
-  }
+}
 
-  .focus_area .media .media-body h5 {
+.focus_area .media .media-body h5 {
     font-size: 15px;
     font-family: "Lato", sans-serif;
     color: #074d0a;
     text-align: center;
-  }
+}
 
